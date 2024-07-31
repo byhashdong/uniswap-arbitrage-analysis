@@ -101,17 +101,29 @@ Now we have the parameters $E_a, E_b$ for this virtual pool from A->A constructe
 
 $$
 \begin{align}
-& {\Delta_a}' = \frac{E_ar\Delta_a}{E_0+r\Delta_a} \\
+& {\Delta_a}' = \frac{E_ar\Delta_a}{E_b+r\Delta_a} \\
 & f = {\Delta_a}' - \Delta_a
 \end{align}
 $$
 
 Here $f$ is our profit, calculate its derivative, we can find the optimal input amount:
 
+$$ f = \frac{E_ar\Delta_a}{E_b+r\Delta_a} - \Delta_a  $$
+let $u = E_ar\Delta_a$ and $ v = E_b + r\Delta_a $ then:
+$$(\frac{u}{v})' = \frac{u'v - uv'}v^2$$
+here, $u'=E_ar$ and $v'=r$
+$$\frac{d}{\Delta_a}(\frac{E_ar\Delta_a}{E_b+r\Delta_a}) = \frac{(E_ar)(E_b+r\Delta_a)-(E_ar\Delta_a)(r)}{(E_b+r\Delta_a)^2} = \frac{E_arE_b}{(E_b+r\Delta_a)^2} $$
+and we should subtract $\Delta_a$, then:
+$$\frac{d}{\Delta_a} = \frac{E_arE_b}{(E_b+r\Delta_a)^2} - 1$$
+set the derivative = 0
+$$\frac{E_arE_b}{(E_b+r\Delta_a)^2} - 1 = 0$$
+solving for $\Delta_a$
 $$
-\Delta_a = \frac{\sqrt{E_aE_br}-E_a}{r}
-$$
-
+\frac{E_aE_br}{(E_b+r\Delta_a)^2} = 1 \\
+E_aE_br = (E_b+r\Delta_a)^2 \\
+\sqrt{E_aE_br} = E_b+r\Delta_a \\
+r\Delta_a = \sqrt{E_aE_br} - E_b \\
+\Delta_a = \frac{\sqrt{E_aE_br}-E_a}{r} $$
 Code for path finding with optimal input amount calculation:
 
 ```python
