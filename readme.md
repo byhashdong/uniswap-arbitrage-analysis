@@ -109,12 +109,10 @@ $$
 Here $f$ is our profit, calculate its derivative, we can find the optimal input amount:
 
 $$ 
-\begin{align}
 f = \frac{E_ar\Delta_a}{E_b+r\Delta_a} - \Delta_a  
-\end{align}
-
 $$
-let $u = E_ar\Delta_a$ and $ v = E_b + r\Delta_a $ then:
+
+let $u = E_ar\Delta_a$ and $v = E_b + r\Delta_a$ then:
 $$(\frac{u}{v})' = \frac{u'v - uv'}v^2$$
 
 here, $u'=E_ar$ and $v'=r$
