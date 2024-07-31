@@ -131,11 +131,14 @@ $$\frac{E_arE_b}{(E_b+r\Delta_a)^2} - 1 = 0$$
 solving for $\Delta_a$
 
 $$
-\frac{E_aE_br}{(E_b+r\Delta_a)^2} = 1 \\
-E_aE_br = (E_b+r\Delta_a)^2 \\
-\sqrt{E_aE_br} = E_b+r\Delta_a \\
-r\Delta_a = \sqrt{E_aE_br} - E_b \\
-\Delta_a = \frac{\sqrt{E_aE_br}-E_a}{r} $$
+\begin{align}
+& \frac{E_aE_br}{(E_b+r\Delta_a)^2} = 1 \\
+& E_aE_br = (E_b+r\Delta_a)^2 \\
+& \sqrt{E_aE_br} = E_b+r\Delta_a \\
+& r\Delta_a = \sqrt{E_aE_br} - E_b \\
+& \Delta_a = \frac{\sqrt{E_aE_br}-E_a}{r} 
+\end{align}
+$$
 
 Code for path finding with optimal input amount calculation:
 
